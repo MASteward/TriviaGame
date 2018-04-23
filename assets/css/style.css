@@ -1,0 +1,115 @@
+/*
+font-family: 'Black Ops One', Graduate, serif;
+font-family: 'Graduate', cursive;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../images/portraitStadium.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.timing {
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+  color: rgb(185, 9, 15);
+}
+
+.container {
+  max-width: 760px;
+  margin: auto;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Black Ops One', serif, sans-serif;
+  color: yellow;
+  font-size: 3em;
+}
+
+.displayQuestion {
+  font-size: 1.5em;
+  background-color: rgba(255,255,255,.7);
+}
+
+.startBtn {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  font-family: 'Graduate', serif, sans-serif;
+  font-size: 1.5em;
+  background: rgb(29, 122, 15);
+
+}
+
+.choiceContainer {
+  margin: 10px auto;
+  min-height: 50px;
+  max-height: 100px;
+  position: relative;
+  transition: all 1s ease;
+  transform-style: preserve-3d;
+}
+
+.buttons {
+  font-size: 1.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  font-family: 'Graduate', serif, sans-serif;
+  color: #fff;
+  background-color: rgb(20, 148, 148);
+
+}
+
+.right {
+  position: absolute;
+  transform: rotateX(180deg);
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  padding: 10px 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(15, 119, 25);
+  backface-visibility: hidden;
+}
+
+.wrong {
+  position: absolute;
+  transform: rotateX(180deg);
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  padding: 10px 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(177, 19, 19);
+  backface-visibility: hidden;
+}
+
+.rotation {
+  transform: rotateX(180deg);
+}
+
+@media screen and (orientation: landscape) {
+  body {
+    background: url("../images/stadium.jpg");
+    height: 100%;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+  }
+}
