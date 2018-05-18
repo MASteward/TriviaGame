@@ -1,20 +1,21 @@
 
 window.onload = function() {
-  console.log("start");
-  //create a button to begin game
-  var start = $("<button class='startBtn'>");
-  var welcome = $("<div><h2 class='title'>Welcome to Sports Trivia</h2></div>");
-  //add a class to the button
-  start.addClass("start");
-  //insert descriptive wording to indicate buttons function
-  start.text("Start");
-  //insert it into the document
-  $(".container").append(welcome);
-  $(".container").append(start);
+  // console.log("start");
+  // //create a button to begin game
+  // var start = $("<button class='startBtn'>");
+  // var welcome = $("<div><h2 class='title'>Welcome to Sports Trivia</h2></div>");
+  // //add a class to the button
+  // start.addClass("start");
+  // //insert descriptive wording to indicate buttons function
+  // start.text("Start");
+  // //insert it into the document
+  // $(".container").append(welcome);
+  // $(".container").append(start);
 
 
   // Call nextQuestion to display question and answer choices to user
   $(".start").on("click", function() {
+    $(".start").css("display", "none");
     $(".timeTitle").text("TIME");
     startGame();
   });

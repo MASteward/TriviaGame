@@ -7,11 +7,17 @@ font-family: 'Graduate', cursive;
   box-sizing: border-box;
 }
 
-body {
-  background: url("../images/portraitStadium.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+#time > h2 {
+  margin: 0;
 }
+
+/* body {
+  width: 100%;
+  background: url("../images/cornerKick.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom 65% left 50%;
+  background-size: cover;
+} */
 
 .timing {
   width: 100px;
@@ -20,16 +26,41 @@ body {
   color: rgb(185, 9, 15);
 }
 
+.start-container {
+  position: absolute;
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: 5px;
+  display: block;
+  padding: 10px;
+  top: 50%;
+  text-align: center;
+  left: 33%;
+}
+
+.startBtn {
+  margin-top: 20px;
+  border-style: outset;
+  border-width: 3px;
+  border-right-color: #ccc;
+  color: #fff;
+  width: 150px;
+  height: 50px;
+  /* border-radius: 5px; */
+  font-family: 'Graduate', serif, sans-serif;
+  font-size: 1.5em;
+  background: rgb(29, 122, 15);
+}
+
 .container {
   max-width: 760px;
   margin: auto;
-  padding: 50px 0;
+  padding: 5px 0;
   text-align: center;
 }
 
 .title {
   font-family: 'Black Ops One', serif, sans-serif;
-  color: yellow;
+  color: red;
   font-size: 3em;
 }
 
@@ -47,7 +78,7 @@ body {
 .startBtn {
   width: 150px;
   height: 50px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   font-family: 'Graduate', serif, sans-serif;
   font-size: 1.5em;
   background: rgb(29, 122, 15);
@@ -55,12 +86,15 @@ body {
 }
 
 .choiceContainer {
-  margin: 10px auto;
+  margin: 3px auto;
   min-height: 50px;
   max-height: 100px;
   position: relative;
   transition: all 1s ease;
   transform-style: preserve-3d;
+  border-style: outset;
+  border-right-width: 4px;
+  border-right-color: #ccc;
 }
 
 .buttons {
@@ -109,13 +143,94 @@ body {
 
 .rotation {
   transform: rotateX(180deg);
+  border-style: outset;
+  /* border-right-width: 4px; */
+  border-right-color: #ccc;
+}
+/*============================================================================*/
+                            /* MEDIA QUERIES */
+/*============================================================================*/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575.98px) {
+  body {
+    background: url("../images/cornerKick.jpg");
+    background-repeat: no-repeat;
+    background-position: top 40% left 50%;
+  }
+  .start-container {
+    position: absolute;
+    display: block;
+    top: 30%;
+    left: 0;
+    /* text-align: center; */
+  }
 }
 
-@media screen and (orientation: landscape) {
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
   body {
-    background: url("../images/stadium.jpg");
-    height: 100%;
-    background-size: cover;
+    background: url("../images/footballStadium.jpg");
+    background-position: top;
     background-repeat: no-repeat;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    background: url("../images/footballStadium.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+  .start-container {
+    position: absolute;
+    display: block;
+    top: 45%;
+    left: 7%;
+    text-align: center;
+  }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body {
+    background: url("../images/footballStadium.jpg");
+
+    background-position: top 50% left 50%;
+    background-repeat: no-repeat;
+  }
+  .start-container {
+    position: absolute;
+    display: block;
+    top: 50%;
+    text-align: center;
+    left: 25%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    background: url("../images/footballStadium.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+  .start-container {
+    position: absolute;
+    display: block;
+    top: 40%;
+    text-align: center;
+    right: 33%;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  body {
+    background: url("../images/cornerKick.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 25% left;
   }
 }
