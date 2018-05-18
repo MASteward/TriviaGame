@@ -15,7 +15,7 @@ window.onload = function() {
 
   // Call nextQuestion to display question and answer choices to user
   $(".start").on("click", function() {
-    $(".start").css("display", "none");
+    $(".start-container").css("display", "none");
     $(".timeTitle").text("TIME");
     startGame();
   });
